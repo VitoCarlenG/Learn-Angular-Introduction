@@ -1,0 +1,11 @@
+<h3>About Author: Full Stack Developer</h3>
+
+<button (click)="onClick('fb')">Facebook</button>
+<button (click)="onClick('ig')">Instagram</button>
+<button (click)="onClick('tw')">Twitter</button>
+
+<div [ngSwitch] = "socialMedia">
+    <div *ngSwitchCase = "'fb'">Facebook: Vito Carlen Giovanni</div>
+    <div *ngSwitchCase = "'ig'">Instagram: Vito Carlen Giovanni</div>
+    <div *ngSwitchCase = "'tw'">Twitter: Vito Carlen Giovanni</div>
+</div>

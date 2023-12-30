@@ -1,0 +1,39 @@
+<span [matBadge]=objectBooks.length matBadgeOverlap="false">Notifikasi</span>
+
+<br />
+<br />
+
+<p>Ini adalah penanda Home</p>
+
+<p>Daftar buku yang tersedia:</p>
+<ul>
+    <li *ngFor="let book of books">
+        {{ book }}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let objectBook of objectBooks">
+        {{ objectBook | json }}
+    </li>
+</ul>
+
+<div *ngIf = 'objectBooks.length > 0; else noObjectBook'>
+    <ul>
+        <li *ngFor="let objectBook of objectBooks">
+            ID: {{ objectBook.id }}
+            <br />
+            Nama: {{ objectBook.name }}
+            <button (click)="deleteBook(objectBook)">Delete</button>
+        </li>
+    </ul>
+</div>
+
+<ng-template #noObjectBook>
+    <p>Data buku tidak ditemukan</p>
+</ng-template>
+
+<button (click)="addBook()">Add</button>
+
+<p>Buku terfavorit:</p>
+<p>{{ books[0] }}</p>
