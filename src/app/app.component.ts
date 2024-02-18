@@ -15,7 +15,7 @@ import { DataComponent } from './data/data.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'project-angular';
+  title = 'learn-angular';
   author = 'VitoCarlenG';
   message() {
     return "Selamat Datang";
